@@ -1,0 +1,22 @@
+<templateSet group="Java">
+  <template name="req" value="Objects.requireNonNull($PARAMETER$, &quot;[$CLASS_NAME$] The variable '$PARAMETER$' must not be null&quot;);" description="inserts Objects.requireNonNull check" toReformat="false" toShortenFQNames="true">
+    <variable name="PARAMETER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="test" value="@Test&#10;public void should$TEST$() throws Exception {&#10;    $END$&#10;}" description="generates unit test" toReformat="false" toShortenFQNames="true">
+    <variable name="TEST" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="bef" value="@Before&#10;public void setup() throws Exception {&#10;    $END$&#10;}" description="generates unit before method" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+</templateSet>
