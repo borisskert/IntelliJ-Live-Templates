@@ -19,4 +19,11 @@
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
+  <template name="aeq" value="org.junit.Assert.assertThat($SOMETHING$, org.hamcrest.core.Is.is(org.hamcrest.core.IsEqual.equalTo($OTHER$)));$END$" description="assert that equals" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OTHER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
