@@ -1,36 +1,49 @@
 <templateSet group="Java">
-  <template name="req" value="java.util.Objects.requireNonNull($PARAMETER$, &quot;[$CLASS_NAME$] The variable '$PARAMETER$' must not be null&quot;);" description="inserts Objects.requireNonNull check" toReformat="false" toShortenFQNames="true">
+  <template name="req" value="java.util.Objects.requireNonNull($PARAMETER$, &quot;[$CLASS_NAME$] The variable '$PARAMETER$' must not be null&quot;);" description="inserts Objects.requireNonNull check" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <variable name="PARAMETER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
-  <template name="test" value="@org.junit.Test&#10;public void should$TEST$() throws Exception {&#10;    $END$&#10;}" description="generates unit test" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+  <template name="test4" value="@org.junit.Test&#10;public void should$TEST$() throws Exception {&#10;    $END$&#10;}" description="generates JUnit4 test" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <variable name="TEST" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_DECLARATION" value="true" />
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
-  <template name="bef" value="@org.junit.Before&#10;public void setup() throws Exception {&#10;    $END$&#10;}" description="generates unit before method" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+  <template name="bef4" value="@org.junit.Before&#10;public void setup() throws Exception {&#10;    $END$&#10;}" description="generates JUnit4 before method" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <context>
       <option name="JAVA_DECLARATION" value="true" />
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
-  <template name="aeq" value="org.junit.Assert.assertThat($SOMETHING$, org.hamcrest.core.Is.is(org.hamcrest.core.IsEqual.equalTo($OTHER$)));$END$" description="assert that equals" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+  <template name="aeq" value="org.junit.Assert.assertThat($SOMETHING$, org.hamcrest.core.Is.is(org.hamcrest.core.IsEqual.equalTo($OTHER$)));$END$" description="assert that equals" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <variable name="SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="OTHER" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="aio" value="org.junit.Assert.assertThat($SOMETHING$, org.hamcrest.core.Is.is(org.hamcrest.core.IsInstanceOf.instanceOf($CLASS$)));$END$" description="assertThat is instanceOf" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+  <template name="aio" value="org.junit.Assert.assertThat($SOMETHING$, org.hamcrest.core.Is.is(org.hamcrest.core.IsInstanceOf.instanceOf($CLASS$)));$END$" description="assertThat is instanceOf" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <variable name="SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="test5" value="@org.junit.jupiter.api.Test&#10;public void should$TEST$() throws Exception {&#10;    $END$&#10;}" description="generates JUnit5 test" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="TEST" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="bef5" value="@org.junit.jupiter.api.BeforeEach&#10;public void setup() throws Exception {&#10;    $END$&#10;}" description="generates JUnit5 before method" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
 </templateSet>
