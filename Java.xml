@@ -59,4 +59,11 @@
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="anequals" value="org.hamcrest.MatcherAssert.assertThat($SOMETHING$, org.hamcrest.Matchers.is(org.hamcrest.Matchers.not(org.hamcrest.Matchers.equalTo($VALUE$))));$END$" description="assertThat not equals value [with hamcrest]" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
