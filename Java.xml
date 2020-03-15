@@ -46,7 +46,7 @@
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
-  <template name="aexc5" value="try {&#10;    $END$&#10;    org.junit.jupiter.api.Assertions.fail(&quot;Should throw $EXCEPTION$&quot;);&#10;} catch ($EXCEPTION$ e) {&#10;    org.hamcrest.MatcherAssert.assertThat(e.getMessage(), org.hamcrest.core.Is.is(org.hamcrest.core.IsEqual.equalTo(&quot;$MESSAGE$&quot;)));&#10;}" description="generates a block which checks for an expected exception during a JUnit 5 test" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+  <template name="aexc5" value="try {&#10;    $END$&#10;    org.junit.jupiter.api.Assertions.fail(&quot;Should throw $EXCEPTION$&quot;);&#10;} catch ($EXCEPTION$ e) {&#10;    org.hamcrest.MatcherAssert.assertThat(e.getMessage(), org.hamcrest.Matchers.is(org.hamcrest.Matchers.equalTo(&quot;$MESSAGE$&quot;)));&#10;}" description="generates a block which checks for an expected exception during a JUnit 5 test" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <variable name="EXCEPTION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -64,6 +64,12 @@
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ntest5" value="@org.junit.jupiter.api.Nested&#10;class $NAME$ {&#10;    $END$&#10;}" description="generates a nested test class" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
 </templateSet>
