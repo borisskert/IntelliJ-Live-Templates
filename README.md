@@ -33,7 +33,7 @@ To keep this configuration up-to-date you can clone this git-repo into the confi
 | name       | Description |
 |------------|-------------|
 | `test5`    | Generates a JUnit 5 `@Test` method block |
-| `bef5`     | Generates a JUnit 5 `@Test` method block |
+| `bef5`     | Generates a JUnit 5 `@BeforeEach` method block |
 | `aexc5`    | Generates a JUnit 5 try-catch block which asserts the thrown Exception type and message |
 | `ntest5`   | Generates a JUnit 5 nested test class |
 | `athrows5` | Generates a JUnit 5 `assertThrows(....class, () -> ...)` statement |
