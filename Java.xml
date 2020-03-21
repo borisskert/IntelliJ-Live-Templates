@@ -72,4 +72,25 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
+  <template name="ansame" value="org.hamcrest.MatcherAssert.assertThat($SOMETHING$, org.hamcrest.Matchers.is(org.hamcrest.Matchers.not(org.hamcrest.Matchers.sameInstance($VALUE$))));$END$" description="assertThat not same instance [with hamcrest]" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="asame" value="org.hamcrest.MatcherAssert.assertThat($SOMETHING$, org.hamcrest.Matchers.is(org.hamcrest.Matchers.sameInstance($VALUE$)));$END$" description="assertThat is same instance [with hamcrest]" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="athrows5" value="org.junit.jupiter.api.Assertions.assertThrows($EXCEPTION$.class, () -&gt; $STATEMENT$);$END$" description="assertThrows an exception" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="EXCEPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="STATEMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
